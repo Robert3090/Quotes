@@ -1,0 +1,18 @@
+.box {
+    display: flex;
+    flex-direction: column;
+}
+
+.phrase {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.author {
+    color: white;
+    font-size: 16px;
+    margin-top: 40px;
+    align-self: flex-end;
+    margin-right: 15%;
+}

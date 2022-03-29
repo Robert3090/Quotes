@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Data from './quotes.json';
+import React, { useState } from 'react';
+import QuoteBox from './Components/QuoteBox.js';
+import Button from './Components/Button.js';
 
 function App() {
+
+  let index = Math.floor(Math.random()*102);
+  const [color, setColor] = useState('yellow');
+  const [quote, setQuote] = useState(Data.quotes[index]);
+
+  /*function ChangeBackground () {
+
+  }*/
+
+  function Quote(){
+    index = Math.floor(Math.random()*102);
+    setQuote(Data.quotes[index]);
+    /*ChangeBackground();*/
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <QuoteBox quote={quote}/>
+        <Button className="btn-next" change={Quote} quote={quote.quote}/>
+      </div>
     </div>
   );
 }

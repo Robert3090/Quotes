@@ -1,0 +1,26 @@
+.btn {
+    margin-left: 70%;
+    background-color: transparent;
+    border: none;
+    color: #007fff;
+    padding: 12px 29px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid #007fff;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+    background-color: #007fff;
+    color: white;
+}
+
+.btn:active {
+    background-color: #0269cf;
+    border-color: #0269cf;
+}
